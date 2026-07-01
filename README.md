@@ -1,4 +1,13 @@
+
 <p align="center">
+  <img src="public/images/077d8204-84ad-4735-a79e-413ba086df8b.png" width="100%" alt="Neon District Banner">
+</p>
+
+# 🌆 Neon District Lounge
+
+**A 3D Interactive Cyberpunk World + DJ Console + AI NPCs**
+
+
   <img src="public/images/077d8204-84ad-4735-a79e-413ba086df8b.png" width="100%" alt="Neon District Banner">
 </p>
 <div style="background-image: url('public/images/077d8204-84ad-4735-a79e-413ba086df8b.png'); background-size: cover; background-position: center; padding: 60px 20px; text-align: center; color: #fff; border-radius: 8px;">
