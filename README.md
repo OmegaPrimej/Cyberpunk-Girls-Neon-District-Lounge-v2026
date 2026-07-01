@@ -18,6 +18,21 @@
 # Neon District Lounge
 
 
+<div align="center" style="background-image: url('./public/images/3d-cyberpunk-woman-in-a-futuristic-neon-club-hands.jpeg'); background-size: cover; background-position: center; padding: 60px 20px; position: relative; border-radius: 8px;">
+  <!-- This overlay div creates the transparency effect over your image -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 10, 15, 0.75); border-radius: 8px; z-index: 1;"></div>
+
+  <!-- This holds your actual content floating in front of the background -->
+  <div style="position: relative; z-index: 2;">
+    <h1 style="color: #ff00ff; text-shadow: 0 0 10px #ff00ff; font-family: monospace;">🌆 NEON DISTRICT LOUNGE 🌆</h1>
+    <p style="color: #00ffff; font-family: monospace; font-size: 16px;">
+      A 3D Interactive Cyberpunk World + DJ Console + AI NPCs
+    </p>
+    <code style="background: rgba(0,0,0,0.5); color: #fff; padding: 4px 8px; border-radius: 4px;">npm run self-build</code>
+  </div>
+</div>
+
+
 
 
 Awesome — I love this manifesto. It fits perfectly with the **Neon District Lounge** vibe: the fusion of flesh and code, the ritualistic worship of uptime, the girls as updates.  
