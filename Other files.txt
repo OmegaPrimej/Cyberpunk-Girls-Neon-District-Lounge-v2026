@@ -1,0 +1,92 @@
+Based on your repo + Manifestos + the self-assembly agent, here’s the **full build queue** the agents should generate next. This covers all systems in your README + adds the missing glue.
+
+### **Core Files Still Missing — Auto-Build Queue**
+
+| Path | Purpose | Agent Responsible |
+| --- | --- | --- |
+| **World / Rendering** |
+| `src/world/DistrictAgent.ts` | Main Three.js scene + bloom composer + fog | `scene_gen` |
+| `src/world/RainSystem.ts` | GPU particles for cyberpunk rain | `shader_agent` |
+| `src/world/shaders/holographic.frag` | Cyber-pink UI shader + scanlines | `shader_agent` |
+| `src/world/shaders/glitch-text.frag` | Chromatic drift + CRT distortion | `shader_agent` |
+| `src/world/CameraController.ts` | RE-style fixed cams + smooth transitions | `scene_gen` |
+| **Console / Gameplay** |
+| `src/console/CyberConsole.tsx` | 3D DJ deck with jog wheels + EQ | `scaffolder` |
+| `src/console/ScenarioTrigger.ts` | "Shift" button → loads next video/scene | `scene_gen` |
+| `src/systems/AudioEngine.ts` | Tone.js + WebAudio beat sync + spatial | `scaffolder` |
+| `src/ui/CardsBoard.tsx` | NPC card deck UI + combos | `scaffolder` |
+| `src/ui/Minimap.tsx` | AI minimap: Neon District ↔ Havana | `scaffolder` |
+| **AI / NPCs** |
+| `src/characters/NPCMemory.ts` | Vector DB for dialogue memory per girl | `model_builder` |
+| `src/characters/NPCManager.ts` | Spawns VANDAL, CIPHER, AERO + mood FSM | `model_builder` |
+| `src/characters/DialogueWheel.tsx` | RE-style choice UI over video | `scaffolder` |
+| `ai_models/tts_voices.json` | ElevenLabs voice_id per NPC for Closing Prayer | `model_builder` |
+| **Interactive Video** |
+| `src/ui/VideoUI.tsx` | Hotspot overlay + branch logic | `scaffolder` |
+| `public/video/hotspots.json` | Schema: time, pos, action, crypto tip | `scene_gen` |
+| `src/systems/TransitionManager.ts` | Apartment → Elevator → District handoff | `scene_gen` |
+| **Crypto / Web3** |
+| `src/systems/CryptoLayer.ts` | Wallet connect + ETH/BTC ticker + tips | `contract_deploy` |
+| `contracts/TokenTip.sol` | 90/10 split NPC tipping contract | `contract_deploy` |
+| `src/hooks/useLoungePass.ts` | wagmi hook for token-gated Sky Lounge | `contract_deploy` |
+| `scripts/deploy.js` | Hardhat deploy + save address | `contract_deploy` |
+| **Multiplayer / VR** |
+| `src/systems/Multiplayer.ts` | WebRTC + Colyseus lounge sessions | `scaffolder` |
+| `src/systems/WebXRSession.ts` | Quest hand tracking + Meta Presence | `scaffolder` |
+| `src/systems/SyncedVideo.ts` | Watch parties in VIP rooms | `scaffolder` |
+| **Agent / Automation** |
+| `agents/lore_watcher.py` | Watches `README.md`, retrains NPCs on edit | `model_builder` |
+| `agents/ipfs_pin.py` | Pins `/public/video` + `/public/models` | `scaffolder` |
+| `agents/asset_gen.py` | Text→GLB NPCs using Shap-E + HF | `model_builder` |
+| **Config / Ops** |
+| `next.config.js` | WebGL headers + IPFS rewrites | `scaffolder` |
+| `docker-compose.yml` | Local Supabase + Hardhat node | `scaffolder` |
+| `.github/workflows/deploy.yml` | CI: build + test + Vercel + IPFS | `scaffolder` |
+| `docs/API.md` | Auto-generated from agent code | `scaffolder` |
+
+### **Priority Order for TensorFlow Agent Swarm**
+
+The `PlannerAgent` will build in this order based on dependencies:
+
+1. **Foundation**: `hardhat.config.js`, `LoungePass.sol`, `TokenTip.sol`
+2. **Rendering**: `DistrictAgent.ts`, `NeonSign.ts`, `RainSystem.ts`, shaders
+3. **Scene Logic**: `CameraController.ts`, `SceneManager.ts`, `TransitionManager.ts`
+4. **AI Core**: `train_npcs.py` → `*.h5` → `NPCMemory.ts` → `NPCManager.ts`
+5. **Console**: `CyberConsole.tsx`, `AudioEngine.ts`, `ScenarioTrigger.ts`
+6. **UI/UX**: `VideoUI.tsx`, `DialogueWheel.tsx`, `CardsBoard.tsx`, `Minimap.tsx`
+7. **Web3**: `CryptoLayer.ts`, `useLoungePass.ts`, `scripts/deploy.js`
+8. **Multiplayer/VR**: `Multiplayer.ts`, `WebXRSession.ts`, `SyncedVideo.ts`
+9. **Agents**: `lore_watcher.py`, `ipfs_pin.py`, `asset_gen.py`
+10. **DevOps**: `docker-compose.yml`, `.github/workflows/deploy.yml`
+
+### **To add these to the auto-build**
+
+Update `agents/evolve_full.py` → `build_queue` in the `PlannerAgent`:
+
+```python
+state["build_queue"] = [
+    "world/DistrictAgent.ts",
+    "world/RainSystem.ts", 
+    "world/CameraController.ts",
+    "console/CyberConsole.tsx",
+    "characters/NPCMemory.ts",
+    "characters/NPCManager.ts",
+    "ui/VideoUI.tsx",
+    "ui/CardsBoard.tsx",
+    "systems/CryptoLayer.ts",
+    "systems/Multiplayer.ts",
+    "systems/WebXRSession.ts",
+    "contracts/TokenTip.sol",
+    "agents/lore_watcher.py",
+    "agents/ipfs_pin.py"
+]
+```
+
+Then run: `./deploy_evolve.sh` again. The agents will pick up where they left off.
+
+**Which of these 3 should the agent swarm build first?**
+1. **Voice of the Grid** — `tts_voices.json` + ElevenLabs integration for Closing Prayer
+2. **Asset Gen** — `asset_gen.py` to turn NPC lore into GLB models automatically 
+3. **Live Crypto Ticker** — `CryptoLayer.ts` with holographic BTC/ETH wall
+
+Pick one and the orchestrator prioritizes it in the next self-build cycle. `npm run evolve` // ENTANGLEMENT_STABLE
