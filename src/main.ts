@@ -1,4 +1,32 @@
 import * as THREE from 'three';
+
+// ... after creating scene, camera, renderer ...
+
+// 1. Create a video element
+const video = document.createElement('video');
+video.src = '/videos/background_loop.mp4';   // relative to public/
+video.loop = true;
+video.muted = true;
+video.autoplay = true;
+video.playsInline = true;
+video.crossOrigin = 'anonymous';
+
+// 2. Start playing (user gesture may be needed in some browsers)
+video.play().catch(() => {
+  console.warn('Autoplay blocked – click anywhere to start');
+  // You can add a click listener to play later
+});
+
+// 3. Create a video texture
+const videoTexture = new THREE.VideoTexture(video);
+videoTexture.colorSpace = THREE.SRGBColorSpace;
+
+// 4. Set as scene background
+scene.background = videoTexture;
+
+
+
+import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
