@@ -1,3 +1,9 @@
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "self-build": "node generate-world.js"
+  },
 
 import fs from 'fs';
 import path from 'path';
