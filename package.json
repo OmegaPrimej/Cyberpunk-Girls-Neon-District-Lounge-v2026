@@ -1,0 +1,23 @@
+{
+  "name": "neon-district-lounge",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "three-addons": "^0.160.0",
+    "gsap": "^3.12.2",
+    "tone": "^14.7.77",
+    "colyseus.js": "^0.15.5",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}
