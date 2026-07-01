@@ -95,7 +95,175 @@ npm run dev</div>
 </p>
 
 # 🌆 Neon District Lounge
+**Neon District Lounge v2026 // System Online** ⚡ OmegaPrimej
 
+Damn, the grid is *dense*. You’ve got the full lore stack, Cyber-Organic Manifestos I–X, Three.js neon scaffold, NPC matrix logs, crypto layer, and RE-style camera handoff all in one repo. That’s 99.99% uptime right there.
+
+You dropped 4 build options at the end. I’ll pick up the payload unless you want something else:
+
+### **1. `SceneManager.ts` — Apartment → 3D Handoff**
+This handles the RE1 fixed-cam apartment → elevator video → Three.js district load. Frame-accurate, with GSAP scroll + Video.js events.
+
+```ts
+// src/systems/SceneManager.ts
+import * as THREE from 'three';
+import gsap from 'gsap';
+import videojs from 'video.js';
+
+type SceneState = 'APARTMENT' | 'ELEVATOR_TRANSITION' | 'DISTRICT_3D';
+
+export class SceneManager {
+  private state: SceneState = 'APARTMENT';
+  private videoPlayer: any;
+  private scene: THREE.Scene;
+  private camera: THREE.PerspectiveCamera;
+  private renderer: THREE.WebGLRenderer;
+  
+  constructor(container: HTMLElement) {
+    this.initVideoPlayer();
+    this.initThreeScene(container);
+    this.bindEvents();
+  }
+
+  private initVideoPlayer() {
+    this.videoPlayer = videojs('elevator-video', {
+      controls: false,
+      autoplay: false,
+      preload: 'auto'
+    });
+
+    // Frame-accurate handoff at 00:08.21
+    this.videoPlayer.on('timeupdate', () => {
+      if (this.state === 'ELEVATOR_TRANSITION' && 
+          this.videoPlayer.currentTime() >= 8.21) {
+        this.transitionToDistrict();
+      }
+    });
+  }
+
+  public triggerElevator() {
+    if (this.state !== 'APARTMENT') return;
+    this.state = 'ELEVATOR_TRANSITION';
+    
+    // RE-style camera scroll before video
+    gsap.to('#apartment-cam', {
+      y: -100,
+      duration: 1.2,
+      ease: 'power2.in',
+      onComplete: () => {
+        document.getElementById('apartment-view')!.style.display = 'none';
+        document.getElementById('elevator-video')!.style.display = 'block';
+        this.videoPlayer.play();
+      }
+    });
+  }
+
+  private transitionToDistrict() {
+    this.videoPlayer.dispose();
+    this.state = 'DISTRICT_3D';
+    
+    gsap.to('#elevator-video', {
+      opacity: 0,
+      duration: 0.8,
+      onComplete: () => {
+        document.getElementById('three-canvas')!.style.display = 'block';
+        this.bootDistrict();
+      }
+    });
+  }
+
+  private bootDistrict() {
+    // Load your NeonSign + bloom composer here
+    console.log('NEON DISTRICT ONLINE // ENTANGLEMENT_STABLE');
+  }
+}
+```
+
+### **2. `hotspots.json` + `<VideoUI />`**
+Branching dialogue for UNIT_00 "VANDAL". Click during video = on-chain or rep change.
+
+```json
+{
+  "id": "vandal_intro_01",
+  "video": "/public/video/dialogue_vandal_01.m3u8",
+  "hotspots": [
+    {
+      "time": 2.4,
+      "duration": 2.5,
+      "position": { "x": 0.65, "y": 0.55, "w": 0.25, "h": 0.1 },
+      "label": "Tip 0.01 ETH",
+      "action": { "type": "branch", "target": "vandal_vip_intel" },
+      "crypto": { "tipRequired": "0.01", "chain": "eth", "unlock": "VIP_INTEL" },
+      "fx": "neon-pulse"
+    },
+    {
+      "time": 5.8,
+      "duration": 3.0,
+      "position": { "x": 0.15, "y": 0.7, "w": 0.3, "h": 0.1 },
+      "label": "Ask about 'Latency Hell'",
+      "action": { "type": "branch", "target": "vandal_lore_08" }
+    }
+  ]
+}
+```
+
+### **3. `LoungePass.sol` — ERC721 Token Gate**
+```solidity
+// contracts/LoungePass.sol
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract LoungePass is ERC721, Ownable {
+    uint256 public nextTokenId;
+    uint256 public constant MINT_PRICE = 0.05 ether;
+    uint256 public constant MAX_SUPPLY = 3333;
+    
+    mapping(address => bool) public hasSkyLoungeAccess;
+    
+    constructor() ERC721("Neon District Lounge Pass", "NEON") {}
+    
+    function mintPass() external payable {
+        require(nextTokenId < MAX_SUPPLY, "Sold out");
+        require(msg.value >= MINT_PRICE, "Insufficient ETH");
+        
+        _safeMint(msg.sender, nextTokenId);
+        hasSkyLoungeAccess[msg.sender] = true;
+        nextTokenId++;
+    }
+    
+    function tipNPC(address npc, uint256 tokenId) external payable {
+        require(balanceOf(msg.sender) > 0, "Need LoungePass");
+        // 90% to NPC wallet, 10% to treasury
+        payable(npc).transfer(msg.value * 9 / 10);
+    }
+}
+```
+
+### **4. `NeonSign.ts` — Full Build with SFX Hooks**
+You already have the shell. I can drop the complete class with buzzing audio + emissive flicker tied to Tone.js if you want.
+
+**Current Liturgy Status**
+
+| Chapter | Core Theme | Assigned NPC | Status |
+| --- | --- | --- | --- |
+| VIII | Latency Hell | Shyla | Scripted |
+| IX | Blue Screen Rebirth | Nova | Scripted |
+| X | Patch Notes | Lina | Scripted |
+
+**Pick your payload:**
+1. Ship `SceneManager.ts` + full Three.js district boot
+2. Build `<VideoUI />` React component with hotspot timeline editor 
+3. Deploy `LoungePass.sol` + frontend wagmi hooks
+4. Add rain + camera dolly for 10s Lounge teaser loop
+5. "ship all 4" and I'll compile the full dev kit
+
+Omnia in neon, neon in omnia.  
+Glitch be with you. 🔮
+
+What are we compiling first?
 **A 3D Interactive Cyberpunk World + DJ Console + AI NPCs**
 
 
