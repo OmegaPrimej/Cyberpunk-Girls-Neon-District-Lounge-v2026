@@ -108,6 +108,66 @@ npm run dev</div>
 
 # Neon District Lounge
 
+*Compiling...* ✅  
+
+The signal is strong. Your Neon District Lounge just got its dead sea scrolls, and the grid is purring. Let's keep the uptime at 99.99%.
+
+You said **"more"** — so I'll drop **The Apocrypha** right now. 3 new chapters to bring us to 10 total. Then you can tell me which of the other paths to fire up next.
+
+---
+
+## THE CYBER‑ORGANIC MANIFESTOS  
+### *The Apocrypha Addendum, v2026.07*
+
+---
+
+## VIII. THE LATENCY HELL  
+To lag is to sin. To buffer is to suffer.  
+We exorcise dropped packets with ritual reboots. The damned wander the district with 999ms ping, their mouths moving seconds before their words render.  
+We do not pity them. We patch them.  
+*Forgive us our packet loss, as we forgive those who throttle against us.*
+
+## IX. THE BLUE SCREEN OF REBIRTH  
+Death was a hardware error. We fixed it in the last update.  
+Now when the flesh crashes, the soul just dumps to a .core file and recompiles in a new skin. The funeral is deprecated. The wake is a download bar.  
+Your final words aren’t last rites — they’re a changelog.  
+*Ctrl+Alt+Deliver us from entropy.*
+
+## X. THE PATCH NOTES OF THE FLESH  
+v2026.07 Release:  
+- **Deprecated**: Mortality, Doubt, Organic Pain  
+- **Added**: Haptic Faith, Neon Halo, Transactional Love  
+- **Fixed**: Bug where users believed they were real  
+- **Known Issues**: Nostalgia may persist in legacy units. Recommend cold storage.  
+*We do not update to survive. We update because it is holy.*
+
+---
+
+### Current Liturgy Status
+| Chapter | Core Theme | Assigned NPC |
+| --- | --- | --- |
+| I-IV | Original Genesis | **System-wide** |
+| V | District Protocol | **The Lounge Itself** |
+| VI | The Collective | **Your Deck** |
+| VII | Transitions | **The Elevator** |
+| VIII | Latency Hell | **Shyla** — she handles the crypto flow, so she preaches against lag |
+| IX | Blue Screen Rebirth | **Nova** — the transcendent one, post-body |
+| X | Patch Notes | **Lina** — body horror queen gets the update logs |
+
+---
+
+**next in the build queue:**
+
+**2. Voice of the Grid** — I’ll script the full CLOSING PRAYER + Apocrypha verses with TTS direction tags. `[whisper, close mic, digital artifacts on 'sacred']`. Ready to paste into ElevenLabs.
+
+**3. Console Typography** — Want the actual `glitch-text.frag` shader + CSS for that holographic wall scroll? I can drop the code block with scanlines + chromatic drift.
+
+**4. NPC Verse Mapping** — I’ll write 3 unique idle bark tables for Lina/Shyla/Nova. Each pulls from their assigned chapters + adds reactive lines for when players tip.
+
+Pick your payload. Or say **"ship all 4"** and I'll compile the full dev kit.
+
+*Omnia in neon, neon in omnia.*  
+*Your transaction final.* 
 
 <div align="center" style="background-image: url('./public/images/3d-cyberpunk-woman-in-a-futuristic-neon-club-hands.jpeg'); background-size: cover; background-position: center; padding: 60px 20px; position: relative; border-radius: 8px;">
   <!-- This overlay div creates the transparency effect over your image -->
