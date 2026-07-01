@@ -1,6 +1,9 @@
 
 # 🌆 Cyberpunk Girls of the Neon District
 > **Central Quantum Entanglement Node & Neural Link Interface Terminal.**
+<p align="center">
+  <img src="3d-cyberpunk-woman-in-a-futuristic-neon-club-hands.jpeg" width="100%" alt="Cadile">
+</p>
 
 ---
 
