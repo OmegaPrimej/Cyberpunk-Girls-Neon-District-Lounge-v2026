@@ -1,4 +1,92 @@
 
+# 🌆 Cyberpunk Girls of the Neon District
+> **Central Quantum Entanglement Node & Neural Link Interface Terminal.**
+
+---
+
+<!-- FLUID SYSTEM INTERFACE BOX CONTAINER wrapper -->
+<div style="width: 100%; max-width: 100%; background-color: #0b0c10; border: 2px solid #1f2833; border-radius: 8px; font-family: 'Courier New', monospace; box-shadow: 0 0 25px rgba(102, 252, 241, 0.2); overflow: hidden; margin: 20px 0; box-sizing: border-box;">
+
+  <!-- PROFILE DATA HEADER LAYER WITH LIVE PULSING NEON LIGHTS -->
+  <div style="background-color: rgba(22, 27, 34, 0.9); padding: 15px; border-bottom: 2px solid #1f2833; box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+    <div>
+      <h2 style="color: #66fcf1; font-size: 1.2rem; letter-spacing: 2px; margin: 0 0 4px 0; font-family: 'Courier New', monospace; font-weight: bold; background: none; border: none; padding: 0;">🧠 NEURAL_LINK MODULE // ACTIVE</h2>
+      <p style="font-size: 0.75rem; color: #8b949e; margin: 0; padding: 0; background: none;">QUANTUM COUPLING STATUS: ENTANGLEMENT_STABLE</p>
+    </div>
+    <!-- DEEP LINK TO YOUR LIVE TOTAL MEDIA FUSION SITE -->
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="https://github.io" target="_blank" style="color: #66fcf1; background: rgba(102, 252, 241, 0.1); border: 1px solid #66fcf1; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; text-decoration: none; font-weight: bold; box-shadow: 0 0 8px rgba(102, 252, 241, 0.3); font-family: 'Courier New', monospace;">⚡ INITIALIZE LIVE HUB</a>
+      <div class="pulse-glow-green" style="width: 12px; height: 12px; background-color: #39ff14; border-radius: 50%; box-shadow: 0 0 8px #39ff14;"></div>
+    </div>
+  </div>
+
+  <!-- HOST IDENTITY ARTWORK WINDOW (RESPONSIVE EDGE-TO-EDGE SCALING) -->
+  <div style="width: 100%; margin: 0; padding: 0; overflow: hidden; line-height: 0;">
+    <img src="./public/images/3d-cyberpunk-woman-in-a-futuristic-neon-club-hands.jpeg" style="width: 100%; max-width: 100%; height: auto; display: block; margin: 0; padding: 0; border: none;" alt="Cyber Punk Girl Main System View">
+  </div>
+
+  <!-- CONTAINER LOWER BODY CONSOLE -->
+  <div style="padding: 20px; background-color: #0d1117; box-sizing: border-box; border-top: 2px solid #1f2833;">
+    
+    <!-- NEURAL INTERFACE PROFILE LOG -->
+    <div style="background: rgba(11, 12, 16, 0.9); border-left: 4px solid #ff4d6d; padding: 15px; margin-bottom: 20px; border-radius: 0 6px 6px 0; box-sizing: border-box;">
+      <h3 style="color: #ff4d6d; font-size: 0.95rem; margin: 0 0 8px 0; letter-spacing: 1px; font-weight: bold; font-family: 'Courier New', monospace;">⚡ SYSTEM LORE // QUANTUM QUANTIFICATION</h3>
+      <p style="font-size: 0.8rem; color: #c9d1d9; line-height: 1.5; margin: 0; padding: 0; background: none;">
+        The cybernetic framework is engineered to establish a localized matrix connection directly with the elite bio-engineered units of the Neon Core. Using synchronized brain-computer metrics (BCI), operators override physical network distances—entangling reality with raw terminal streams via a synthetic Neural Link pipeline.
+      </p>
+    </div>
+
+    <!-- REPOSITORY GIRL FILES // PROFILE MATRICES -->
+    <h3 style="color: #66fcf1; font-size: 1rem; margin: 25px 0 12px 0; letter-spacing: 2px; border-bottom: 1px dashed #1f2833; padding-bottom: 5px; font-weight: bold; font-family: 'Courier New', monospace;">📁 ARCHIVE_LOG // CORE UNITS DETECTED</h3>
+    
+    <!-- Girl Profile 1 -->
+    <div style="background: rgba(22, 27, 34, 0.6); border: 1px solid #1f2833; border-radius: 6px; padding: 12px; margin-bottom: 12px; box-sizing: border-box;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;">
+        <strong style="color: #66fcf1; font-size: 0.85rem; font-family: 'Courier New', monospace;">● UNIT_00 // "VANDAL" (PRIMARY BACKDROP)</strong>
+        <a href="./public/images/forecast_000.png" target="_blank" style="color: #ff4d6d; font-size: 0.7rem; background: rgba(255, 77, 109, 0.15); padding: 2px 8px; border-radius: 4px; text-decoration: none; border: 1px solid #ff4d6d; font-family: 'Courier New', monospace;">ISOLATE MATRIX VIEW (98.4%)</a>
+      </div>
+      <p style="font-size: 0.75rem; color: #8b949e; margin: 0; padding: 0; background: none;"><strong>Neural Frequency</strong>: 440.22 Hz // <strong>Class</strong>: Neural Infiltrator / DJ</p>
+      <p style="font-size: 0.75rem; color: #c9d1d9; margin-top: 4px; padding: 0; background: none;">Skin is just a biodegradable interface. Currently linked as the primary audio console host shell, deploying interactive rhythm waves.</p>
+    </div>
+
+    <!-- Girl Profile 2 -->
+    <div style="background: rgba(22, 27, 34, 0.6); border: 1px solid #1f2833; border-radius: 6px; padding: 12px; margin-bottom: 12px; box-sizing: border-box;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;">
+        <strong style="color: #66fcf1; font-size: 0.85rem; font-family: 'Courier New', monospace;">● UNIT_01 // "CIPHER"</strong>
+        <a href="./public/images/forecast_001.png" target="_blank" style="color: #66fcf1; font-size: 0.7rem; background: rgba(102, 252, 241, 0.15); padding: 2px 8px; border-radius: 4px; text-decoration: none; border: 1px solid #66fcf1; font-family: 'Courier New', monospace;">ISOLATE MATRIX VIEW (91.3%)</a>
+      </div>
+      <p style="font-size: 0.75rem; color: #8b949e; margin: 0; padding: 0; background: none;"><strong>Neural Frequency</strong>: 410.15 Hz // <strong>Class</strong>: Shadow Protocol / Net Ghost</p>
+      <p style="font-size: 0.75rem; color: #c9d1d9; margin-top: 4px; padding: 0; background: none;">The real is the glitch; the glitch is the real. First-layer diagnostic manager handling background network cryptography overrides.</p>
+    </div>
+
+    <!-- Girl Profile 3 -->
+    <div style="background: rgba(22, 27, 34, 0.6); border: 1px solid #1f2833; border-radius: 6px; padding: 12px; margin-bottom: 12px; box-sizing: border-box;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;">
+        <strong style="color: #66fcf1; font-size: 0.85rem; font-family: 'Courier New', monospace;">● UNIT_02 // "AERO"</strong>
+        <a href="./public/images/forecast_002.png" target="_blank" style="color: #ffb703; font-size: 0.7rem; background: rgba(255, 183, 3, 0.15); padding: 2px 8px; border-radius: 4px; text-decoration: none; border: 1px solid #ffb703; font-family: 'Courier New', monospace;">ISOLATE MATRIX VIEW (82.1%)</a>
+      </div>
+      <p style="font-size: 0.75rem; color: #8b949e; margin: 0; padding: 0; background: none;"><strong>Neural Frequency</strong>: 312.90 Hz // <strong>Class</strong>: Logic Breaker / Sub-Grid Racer</p>
+      <p style="font-size: 0.75rem; color: #c9d1d9; margin-top: 4px; padding: 0; background: none;">We plunge our bodies directly into the open wounds of steel. Controls local sub-grid speedways and high-altitude navigation paths.</p>
+    </div>
+
+    <!-- DEPLOYMENT CONSOLE INSTRUCTIONS -->
+    <h3 style="color: #66fcf1; font-size: 1rem; margin: 25px 0 12px 0; letter-spacing: 2px; border-bottom: 1px dashed #1f2833; padding-bottom: 5px; font-weight: bold; font-family: 'Courier New', monospace;">💻 TERMINAL_BOOT // INITIALIZATION COMMANDS</h3>
+    <p style="font-size: 0.8rem; color: #c9d1d9; margin-bottom: 10px; padding: 0; background: none;">Execute the sequential commands below within your system shell to instantiate the network array:</p>
+    
+    <div style="background: #000; border: 1px solid #1f2833; border-radius: 4px; padding: 12px; color: #39ff14; font-size: 0.75rem; overflow-x: auto; white-space: pre; font-family: monospace;"># Install sub-grid dependencies
+npm install
+
+# Compile ecosystem using automated script runner
+npm run self-build
+
+# Ignite development node array
+npm run dev</div>
+
+  </div>
+</div>
+
+
+
 <p align="center">
   <img src="public/images/077d8204-84ad-4735-a79e-413ba086df8b.png" width="100%" alt="Neon District Banner">
 </p>
