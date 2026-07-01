@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8"><title>Neon District Lounge</title></head>
-<body><div id="root"></div><script type="module" src="/src/main.ts"></script></body>
+<head>
+  <meta charset="utf-8" />
+  <title>Neon District Lounge</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #0a0a0f; }
+    #apartment-view, #elevator-video, #three-canvas {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+    }
+    #elevator-video, #three-canvas { display: none; }
+    #door-trigger { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); padding: 12px 24px; background: #ff00ff; color: #fff; border: none; cursor: pointer; font: 1.2rem monospace; z-index: 10; }
+  </style>
+</head>
+<body>
+  <div id="apartment-view">
+    <!-- Your RE‑style apartment scene (could be a fixed camera image or Three.js) -->
+    <h1 style="color: #66fcf1; text-align: center; margin-top: 30%;">Apartment</h1>
+    <button id="door-trigger">🚪 Open Door</button>
+  </div>
+
+  <video id="elevator-video" src="/public/video/elevator_loop.mp4" muted></video>
+
+  <div id="three-canvas"></div>
+
+  <!-- Import your main entry -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
 </html>
