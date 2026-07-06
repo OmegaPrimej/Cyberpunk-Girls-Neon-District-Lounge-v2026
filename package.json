@@ -1,4 +1,28 @@
 {
+    "name": "neon-district-lounge",
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "self-build": "tsc && vite build"
+    },
+    "dependencies": {
+        "three": "^0.163.0",
+        "gsap": "^3.12.5",
+        "video.js": "^8.16.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3",
+        "vite": "^5.4.0",
+        "@types/three": "^0.163.0"
+    }
+}
+
+
+
+{
   "name": "neon-district-lounge",
   "version": "0.1.0",
   "type": "module",
